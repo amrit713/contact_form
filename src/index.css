@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Manrope", system-ui;
+}
+
+html,
+body,
+:root {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-[#ebebeb] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#94a3b8]    focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#ebebeb] text-black hover:bg-[#ebebeb]/90  h-10 px-4 py-2;
+    }
+    .input {
+        @apply flex h-10 w-full rounded-md border border-[#5b5b5b] bg-[#050505] px-3 py-2 text-sm ring-offset-[#ebebeb] file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#ebebeb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000] focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+}
